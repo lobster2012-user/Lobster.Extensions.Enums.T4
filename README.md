@@ -2,7 +2,8 @@
 Lobster.Extensions.Enums.T4
 
 Example of auto-generated code
-```
+
+```csharp
 namespace Lobster.Extensions.Enums
 {
    public static class Extensions_Enum_Ops
@@ -17,7 +18,7 @@ namespace Lobster.Extensions.Enums
 
 Example of use
 
-```
+```csharp
 using Lobster.Extensions.Enums;
 
 bool SomeFunc(SomeEnumType type)
