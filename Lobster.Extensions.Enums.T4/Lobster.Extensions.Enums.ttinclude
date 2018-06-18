@@ -1,0 +1,103 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+
+<#+
+	protected string _isAnySet_METHOD_NAME = "IsAnySet";
+	protected string _areAllSet_METHOD_NAME = "AreAllSet";
+	protected string _set_METHOD_NAME = "Set";
+	protected string _clear_METHOD_NAME = "Clear";
+#>
+
+<#+
+	void Generate_IsAnySet_METHOD(string typeName)
+	{	
+		if(string.IsNullOrEmpty(_isAnySet_METHOD_NAME)) return;
+#>
+		public static bool <#=_isAnySet_METHOD_NAME#>(this <#=typeName#> value, <#=typeName#> flags) => (value & flags) != 0;
+<#+
+	}
+#>
+<#+
+	void Generate_AreAllSet_METHOD(string typeName)
+	{	
+		if(string.IsNullOrEmpty(_areAllSet_METHOD_NAME )) return;
+#>
+		public static bool <#=_areAllSet_METHOD_NAME#>(this <#=typeName#> value, <#=typeName#> flags) => (value & flags) == flags;
+<#+
+	}
+#>
+<#+
+	void Generate_Set_METHOD(string typeName)
+	{	
+		if(string.IsNullOrEmpty(_set_METHOD_NAME )) return;
+#>
+		public static <#=typeName#> <#=_set_METHOD_NAME#>(this <#=typeName#> value, <#=typeName#> flags) => value | flags;
+<#+
+	}
+#>
+<#+
+	void Generate_Clear_METHOD(string typeName)
+	{	
+		if(string.IsNullOrEmpty(_clear_METHOD_NAME )) return;
+#>
+		public static <#=typeName#> <#=_clear_METHOD_NAME#>(this <#=typeName#> value, <#=typeName#> flags) => value & ~flags;
+<#+
+	}
+#>
+
+
+<#+ void GenerateEnumExtensions_HasFlags(params string[] enums)
+{
+#>
+
+namespace Lobster.Extensions.Enums
+{
+	public static class Extensions_Enum_Ops
+	{
+
+<#+ foreach(var enum_name in enums )
+{
+	var typeName = enum_name.Replace("+",".");
+	Generate_IsAnySet_METHOD(typeName);
+	Generate_AreAllSet_METHOD(typeName);
+	Generate_Set_METHOD(typeName);
+	Generate_Clear_METHOD(typeName);
+}
+#>
+}
+	}
+<#+
+}
+#>
+
+
+
+
+
+
+
+<#+ void GenerateEnumExtensions_HasFlags(IEnumerable<System.Type> types)
+{
+GenerateEnumExtensions_HasFlags(
+types.Where(t=>t.IsEnum).Where(t=> {
+
+var attr = (System.ObsoleteAttribute)Attribute.GetCustomAttribute(t, typeof(System.ObsoleteAttribute));
+return attr == null || !attr.IsError;
+
+}).Select(z=>z.FullName).ToArray()
+);
+}
+#>
+<#+ void GenerateEnumExtensions_HasFlags(params System.Type[] types)
+{
+	GenerateEnumExtensions_HasFlags(types.AsEnumerable());
+}
+#>
+<#+ void GenerateEnumExtensions_HasFlags(System.Reflection.Assembly assembly)
+{
+	GenerateEnumExtensions_HasFlags(assembly.GetExportedTypes());
+}
+#>

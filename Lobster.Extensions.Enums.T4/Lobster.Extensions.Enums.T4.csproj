@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Lobster.Extensions.Enums.ttinclude" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Lobster.Extensions.Enums.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>Lobster.Extensions.Enums.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Lobster.Extensions.Enums.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Lobster.Extensions.Enums.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Update="Lobster.Extensions.Enums.Sample.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Lobster.Extensions.Enums.Sample.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Lobster.Extensions.Enums.Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>Lobster.Extensions.Enums.Sample.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
