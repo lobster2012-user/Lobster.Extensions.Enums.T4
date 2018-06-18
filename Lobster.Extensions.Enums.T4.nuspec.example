@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Lobster.Extensions.Enums.T4</id>
+    <version>1.0.0</version>
+    <authors>lobster2012-user</authors>
+    <owners>lobster2012-user</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4</projectUrl>
+    <description>Package Description</description>
+    <copyright>lobster2012-user</copyright>
+    <tags>extentions t4 enum enums</tags>
+    <repository type="git" url="https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

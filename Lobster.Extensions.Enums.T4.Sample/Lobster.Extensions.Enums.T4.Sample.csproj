@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\..\..\.nuget\packages\lobster.extensions.enums.t4\1.0.17\contentFiles\any\any\Lobster.Extensions.Enums.T4.Temlates\Lobster.Extensions.Enums.Sample.cs.txt">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Lobster.Extensions.Enums.Sample.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lobster.Extensions.Enums.T4" Version="1.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.17\contentFiles\any\any\Lobster.Extensions.Enums.T4.Temlates\Lobster.Extensions.Enums.Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

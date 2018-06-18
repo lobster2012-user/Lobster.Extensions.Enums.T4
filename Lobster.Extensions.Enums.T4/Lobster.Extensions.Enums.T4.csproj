@@ -1,18 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+	<!--<PackageNoAssemblies>true</PackageNoAssemblies>-->
+    <NuspecFile>$(MSBuildThisFileDirectory)$(MSBuildProjectName).nuspec</NuspecFile>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <PackageProjectUrl>https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>extentions;t4;enum;enums;</PackageTags>
+    <Copyright>lobster2012-user</Copyright>
+    <Authors>lobster2012-user</Authors>
+    <Version>1.0.19</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Lobster.Extensions.Enums.ttinclude" />
+    <None Remove="nuget.exe" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Lobster.Extensions.Enums.ttinclude">
-      <Generator>TextTemplatingFileGenerator</Generator>
+      <Generator></Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LastGenOutput>Lobster.Extensions.Enums.cs</LastGenOutput>
     </Content>
   </ItemGroup>
 
@@ -21,23 +30,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Lobster.Extensions.Enums.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Lobster.Extensions.Enums.ttinclude</DependentUpon>
-    </Compile>
-    <Compile Update="Lobster.Extensions.Enums.Sample.cs">
+    <None Update="Lobster.Extensions.Enums.Sample.cs.txt">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Lobster.Extensions.Enums.Sample.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
+    </None>
     <None Update="Lobster.Extensions.Enums.Sample.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LastGenOutput>Lobster.Extensions.Enums.Sample.cs</LastGenOutput>
+      <LastGenOutput>Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
     </None>
   </ItemGroup>
 
