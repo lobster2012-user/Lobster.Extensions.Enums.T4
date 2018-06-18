@@ -1,7 +1,7 @@
 # Lobster.Extensions.Enums.T4
 Lobster.Extensions.Enums.T4
 
-Sample of auto-generated code
+Example of auto-generated code
 ```
 namespace Lobster.Extensions.Enums
 {
@@ -15,13 +15,13 @@ namespace Lobster.Extensions.Enums
 }
 ```
 
-Sample Of using
+Example of use
 
 ```
 using Lobster.Extensions.Enums;
 
 bool SomeFunc(SomeEnumType type)
 {
-      return type.IsAnySet(SomeEnumType.SomeFlag0|SomeEnumType.SomeFlag1);
+    return type.IsAnySet(SomeEnumType.SomeFlag0|SomeEnumType.SomeFlag1);
 }
 ```
