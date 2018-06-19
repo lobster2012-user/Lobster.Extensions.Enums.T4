@@ -27,6 +27,8 @@ namespace Lobster.Extensions.Enums.T4.Tests
                 (FileAccess.ReadWrite).IsAnySet(FileAccess.Read));
             Assert.IsFalse(
                 (FileAccess.Write).IsAnySet(FileAccess.Read));
+            Assert.IsTrue(
+              (FileAccess.Write).IsAnySet(FileAccess.Read| FileAccess.Write));
         }
         [TestMethod]
         public void Test_AreAllSet()
