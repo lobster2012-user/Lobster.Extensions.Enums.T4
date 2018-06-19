@@ -1,0 +1,5 @@
+﻿<Project>
+	<PropertyGroup>
+		<LobsterExtensionsEnumsT4_TemplatesDirectory>$(MSBuildThisFileDirectory)..\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates</LobsterExtensionsEnumsT4_TemplatesDirectory>
+	</PropertyGroup>
+</Project>

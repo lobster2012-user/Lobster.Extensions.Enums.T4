@@ -6,15 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\..\..\..\..\.nuget\packages\lobster.extensions.enums.t4\1.0.17\contentFiles\any\any\Lobster.Extensions.Enums.T4.Temlates\Lobster.Extensions.Enums.Sample.cs.txt">
+    <Content Include="..\..\..\..\..\.nuget\packages\lobster.extensions.enums.t4\1.0.20\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates\CopyMe.Lobster.Extensions.Enums.Sample.cs.txt">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Lobster.Extensions.Enums.Sample.tt</DependentUpon>
+      <DependentUpon>CopyMe.Lobster.Extensions.Enums.Sample.tt</DependentUpon>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lobster.Extensions.Enums.T4" Version="1.0.17" />
+    <None Include="generate_file_access_ops.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>generate_file_access_ops.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lobster.Extensions.Enums.T4" Version="1.0.20" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,10 +30,39 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
     </None>
+    <None Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.17\contentFiles\any\any\Lobster.Extensions.Enums.T4.Temlates\Lobster.Extensions.Enums.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Lobster.Extensions.Enums.cs</LastGenOutput>
+    </None>
+    <None Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.20\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates\CopyMe.Lobster.Extensions.Enums.Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CopyMe.Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
+    </None>
+    <None Update="generate_file_access_ops.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>generate_file_access_ops.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="generate_file_access_ops.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>generate_file_access_ops.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.20\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates\CopyMe.Lobster.Extensions.Enums.Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </Content>
+    <Content Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.20\contentFiles\any\any\Lobster.Extensions.Enums.T4.Template\CopyMe.Lobster.Extensions.Enums.Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </Content>
   </ItemGroup>
 
 </Project>

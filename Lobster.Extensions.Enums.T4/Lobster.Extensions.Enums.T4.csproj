@@ -2,7 +2,9 @@
 
   <PropertyGroup>
 	<!--<PackageNoAssemblies>true</PackageNoAssemblies>-->
-    <NuspecFile>$(MSBuildThisFileDirectory)$(MSBuildProjectName).nuspec</NuspecFile>
+	<NoBuild>true</NoBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <!--<NuspecFile>$(MSBuildThisFileDirectory)$(MSBuildProjectName).nuspec</NuspecFile>-->
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <PackageProjectUrl>https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4</PackageProjectUrl>
     <RepositoryUrl>https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4</RepositoryUrl>
@@ -10,19 +12,16 @@
     <PackageTags>extentions;t4;enum;enums;</PackageTags>
     <Copyright>lobster2012-user</Copyright>
     <Authors>lobster2012-user</Authors>
-    <Version>1.0.19</Version>
+    <Version>1.0.20</Version>
+	<LobsterExtensionsEnumsT4_TemplatesDirectory>.</LobsterExtensionsEnumsT4_TemplatesDirectory>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Lobster.Extensions.Enums.ttinclude" />
-    <None Remove="nuget.exe" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="Lobster.Extensions.Enums.ttinclude">
-      <Generator></Generator>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Lobster.Extensions.Enums.ttinclude" Pack="true" PackagePath="contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates" />
+	<None Include="Lobster.Extensions.Enums.T4.props" Pack="true" PackagePath="build\" />
+	<None Include="CopyMe.Lobster.Extensions.Enums.Sample.tt" Pack="true" PackagePath="contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates" />
+	
   </ItemGroup>
 
   <ItemGroup>
@@ -30,15 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Lobster.Extensions.Enums.Sample.cs.txt">
+    <None Update="CopyMe.Lobster.Extensions.Enums.Sample.cs.txt">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Lobster.Extensions.Enums.Sample.tt</DependentUpon>
+      <DependentUpon>CopyMe.Lobster.Extensions.Enums.Sample.tt</DependentUpon>
     </None>
-    <None Update="Lobster.Extensions.Enums.Sample.tt">
+    <None Update="CopyMe.Lobster.Extensions.Enums.Sample.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <LastGenOutput>Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
+      <LastGenOutput>CopyMe.Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
     </None>
   </ItemGroup>
 

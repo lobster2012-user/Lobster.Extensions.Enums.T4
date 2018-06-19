@@ -1,0 +1,22 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs.txt" #>  
+
+<#@ include file="$(LobsterExtensionsEnumsT4_TemplatesDirectory)\Lobster.Extensions.Enums.ttinclude"#>  
+
+<#
+
+	//_isAnySet_METHOD_NAME  = "IsAnySet";
+	//_areAllSet_METHOD_NAME = "AreAllSet";
+	//_set_METHOD_NAME = "Set";
+	_clear_METHOD_NAME = "Reset"; 
+
+	GenerateEnumExtensions_HasFlags(
+
+		//typeof(System.IO.File).Assembly
+		typeof(System.IO.FileAccess)
+); 
+#>
