@@ -37,7 +37,7 @@
     </None>
     <None Update="Lobster.Extensions.Enums.Sample.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <LastGenOutput>Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
     </None>
   </ItemGroup>
