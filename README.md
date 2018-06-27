@@ -29,7 +29,7 @@ using Lobster.Extensions.Enums;
 
 bool SomeFunc(SomeEnumType type)
 {
-    return type.IsAnySet(SomeEnumType.SomeFlag0|SomeEnumType.SomeFlag1);
+    return type.IsAnySet(SomeEnumType.SomeFlag0 | SomeEnumType.SomeFlag1);
 }
 ```
 
