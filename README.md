@@ -2,7 +2,7 @@
 Lobster.Extensions.Enums.T4
 
 [![NuGet](https://img.shields.io/nuget/v/Lobster.Extensions.Enums.T4.svg)](https://www.nuget.org/packages/Lobster.Extensions.Enums.T4)
-[![NuGet](https://img.shields.io/nuget/dt/Lobster.Extensions.Enums.T4.svg)](https://www.nuget.org/packages/Lobster.Extensions.Enums.T4)
+[![NuGet](https://img.shields.io/nuget/dt/Lobster.Extensions.Enums.T4.svg?colorB=FF00FF)](https://www.nuget.org/packages/Lobster.Extensions.Enums.T4)
 [![Build status](https://ci.appveyor.com/api/projects/status/4kj0q18frf3me7h7?svg=true)](https://ci.appveyor.com/project/lobster2012-user/lobster-extensions-enums-t4)
 
 
