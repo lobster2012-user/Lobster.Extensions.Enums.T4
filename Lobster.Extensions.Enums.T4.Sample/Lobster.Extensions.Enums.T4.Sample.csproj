@@ -11,6 +11,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>CopyMe.Lobster.Extensions.Enums.Sample.tt</DependentUpon>
     </Content>
+    <Content Include="..\..\..\..\..\.nuget\packages\lobster.extensions.enums.t4\1.0.21\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates\CopyMe.Lobster.Extensions.Enums.Sample.cs.txt">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CopyMe.Lobster.Extensions.Enums.Sample.tt</DependentUpon>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lobster.Extensions.Enums.T4" Version="1.0.20" />
+    <PackageReference Include="Lobster.Extensions.Enums.T4" Version="1.0.21" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +40,10 @@
       <LastGenOutput>Lobster.Extensions.Enums.cs</LastGenOutput>
     </None>
     <None Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.20\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates\CopyMe.Lobster.Extensions.Enums.Sample.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CopyMe.Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
+    </None>
+    <None Update="C:\Users\User\.nuget\packages\lobster.extensions.enums.t4\1.0.21\contentFiles\any\any\Lobster.Extensions.Enums.T4.Templates\CopyMe.Lobster.Extensions.Enums.Sample.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CopyMe.Lobster.Extensions.Enums.Sample.cs.txt</LastGenOutput>
     </None>

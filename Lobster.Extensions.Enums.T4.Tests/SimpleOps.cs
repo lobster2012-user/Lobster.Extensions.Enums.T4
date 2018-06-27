@@ -28,7 +28,7 @@ namespace Lobster.Extensions.Enums.T4.Tests
             Assert.IsFalse(
                 (FileAccess.Write).IsAnySet(FileAccess.Read));
             Assert.IsTrue(
-              (FileAccess.Write).IsAnySet(FileAccess.Read| FileAccess.Write));
+              (FileAccess.Write).IsAnySet(FileAccess.Read | FileAccess.Write));
         }
         [TestMethod]
         public void Test_AreAllSet()
@@ -46,7 +46,7 @@ namespace Lobster.Extensions.Enums.T4.Tests
                 (FileShare.Read).ContainsOnlyAnyOf(FileShare.ReadWrite));
 
             Assert.IsFalse(
-                (FileShare.Delete| FileShare.ReadWrite)
+                (FileShare.Delete | FileShare.ReadWrite)
                 .ContainsOnlyAnyOf(FileShare.ReadWrite));
         }
     }

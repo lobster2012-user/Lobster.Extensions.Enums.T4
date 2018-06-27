@@ -13,6 +13,7 @@
 	//_areAllSet_METHOD_NAME = "AreAllSet";
 	//_set_METHOD_NAME = "Set";
 	_clear_METHOD_NAME = "Reset"; 
+	//_containsOnlyAnyOf_METHOD_NAME = "ContainsOnlyAnyOf";
 
 	GenerateEnumExtensions_HasFlags(
 
