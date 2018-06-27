@@ -16,6 +16,7 @@
 	GenerateEnumExtensions_HasFlags(
 
 		//typeof(System.IO.File).Assembly
-		typeof(System.IO.FileAccess)
+		typeof(System.IO.FileAccess),
+		typeof(System.IO.FileShare)
 ); 
 #>

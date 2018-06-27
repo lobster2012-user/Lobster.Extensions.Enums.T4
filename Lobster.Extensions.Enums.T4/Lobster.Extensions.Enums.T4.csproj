@@ -12,8 +12,10 @@
     <PackageTags>extentions;t4;enum;enums;</PackageTags>
     <Copyright>lobster2012-user</Copyright>
     <Authors>lobster2012-user</Authors>
-    <Version>1.0.20</Version>
+    <Version>1.0.21</Version>
 	<LobsterExtensionsEnumsT4_TemplatesDirectory>.</LobsterExtensionsEnumsT4_TemplatesDirectory>
+	<Description>Effective extension methods for working with enums (auto-generated via t4 without loss of performance)</Description>
+	<PackageReleaseNotes>1.  Added `ContainsOnlyAnyOf` method</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

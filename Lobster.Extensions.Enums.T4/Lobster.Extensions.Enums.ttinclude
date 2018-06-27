@@ -9,6 +9,17 @@
 	protected string _areAllSet_METHOD_NAME = "AreAllSet";
 	protected string _set_METHOD_NAME = "Set";
 	protected string _clear_METHOD_NAME = "Clear";
+	protected string _containsOnlyAnyOf_METHOD_NAME = "ContainsOnlyAnyOf";
+#>
+
+<#+
+	void Generate_ContainsOnlyAnyOf_METHOD(string typeName)
+	{	
+		if(string.IsNullOrEmpty(_containsOnlyAnyOf_METHOD_NAME)) return;
+#>
+		public static bool <#=_containsOnlyAnyOf_METHOD_NAME#>(this <#=typeName#> value, <#=typeName#> flags) => (value & ~flags) == 0;
+<#+
+	}
 #>
 
 <#+
@@ -65,6 +76,7 @@ namespace Lobster.Extensions.Enums
 	Generate_AreAllSet_METHOD(typeName);
 	Generate_Set_METHOD(typeName);
 	Generate_Clear_METHOD(typeName);
+	Generate_ContainsOnlyAnyOf_METHOD(typeName);
 }
 #>
 }

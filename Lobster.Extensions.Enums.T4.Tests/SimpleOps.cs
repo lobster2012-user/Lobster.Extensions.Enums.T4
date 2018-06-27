@@ -38,5 +38,16 @@ namespace Lobster.Extensions.Enums.T4.Tests
             Assert.IsTrue(
                 (FileAccess.ReadWrite).AreAllSet(FileAccess.ReadWrite));
         }
+
+        [TestMethod]
+        public void Test_ContainsOnlyAnyOf()
+        {
+            Assert.IsTrue(
+                (FileShare.Read).ContainsOnlyAnyOf(FileShare.ReadWrite));
+
+            Assert.IsFalse(
+                (FileShare.Delete| FileShare.ReadWrite)
+                .ContainsOnlyAnyOf(FileShare.ReadWrite));
+        }
     }
 }
