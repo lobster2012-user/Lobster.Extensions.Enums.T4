@@ -35,9 +35,9 @@ bool SomeFunc(SomeEnumType type)
 
 You can override name of any method
 ```charp
-   //_isAnySet_METHOD_NAME  = "IsAnySet";
+	//_isAnySet_METHOD_NAME  = "IsAnySet";
 	//_areAllSet_METHOD_NAME = "AreAllSet";
 	//_set_METHOD_NAME = "Set";
-	_clear_METHOD_NAME = "Reset"; 
+	//_clear_METHOD_NAME = "Reset"; 
 	//_containsOnlyAnyOf_METHOD_NAME = "ContainsOnlyAnyOf";
 ```
