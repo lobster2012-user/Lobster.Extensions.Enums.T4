@@ -2,8 +2,9 @@
 
   <PropertyGroup>
 	<!--<PackageNoAssemblies>true</PackageNoAssemblies>-->
-	<NoBuild>true</NoBuild>
+	
     <IncludeBuildOutput>false</IncludeBuildOutput>
+	  <NoBuild>true</NoBuild>
     <!--<NuspecFile>$(MSBuildThisFileDirectory)$(MSBuildProjectName).nuspec</NuspecFile>-->
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <PackageProjectUrl>https://github.com/lobster2012-user/Lobster.Extensions.Enums.T4</PackageProjectUrl>
